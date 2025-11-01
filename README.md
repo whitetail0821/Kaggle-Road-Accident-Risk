@@ -22,18 +22,18 @@ This project focused not only on maximizing performance but also on **mastering 
 
 ### A. Data Preprocessing and EDA
 
-* **Feature Engineering:** Applied **One-Hot Encoding** to categorical features like $\text{road\_type}$, $\text{lighting}$, and $\text{time\_of\_day}$ for effective model ingestion.
-* **Outlier Handling:** Attempted a **Log Transformation** on $\text{num\_reported\_accidents}$ to mitigate skewness. This was ultimately excluded from the final model as it did not yield a significant $\text{Public Score}$ improvement, emphasizing a strategic focus on hyperparameter tuning instead.
+* **Feature Engineering:** Applied **One-Hot Encoding** to categorical features like 'road_type', 'lighting', and 'time_of_day' for effective model ingestion.
+* **Outlier Handling:** Attempted a **Log Transformation** on $'num_reported_accidents' to mitigate skewness. This was ultimately excluded from the final model as it did not yield a significant Public Score improvement, emphasizing a strategic focus on hyperparameter tuning instead.
 
 ### B. Baseline Model Construction and Analysis
 
 * **Model Selection:** Employed **LightGBM**, a highly efficient Gradient Boosting framework, as the primary model.
-* **Performance Tuning:** Achieved a $\text{Validation RMSE}$ of $\mathbf{0.0559}$ through initial tuning. Further refinement included **reducing the $\text{learning\_rate}$ to $0.01$ and increasing $\text{n\_estimators}$ to $3000$** to balance training time with prediction precision.
-* **Feature Importance:** Confirmed that **$\mathbf{curvature}$ and $\mathbf{speed\_limit}$** were the most influential features, guiding subsequent tuning efforts.
+* **Performance Tuning:** Achieved a Validation RMSE of 0.0559 through initial tuning. Further refinement included reducing the learning_rate to 0.01 and increasing n_estimators to 3000 to balance training time with prediction precision.
+* **Feature Importance:** Confirmed that 'curvature' and 'speed_limit' were the most influential features, guiding subsequent tuning efforts.
 
 ### C. Technical Deep Dive (Advanced Approach)
 
-* **Model Switching Attempt:** Explored $\mathbf{XGBoost}$ as an alternative to push past the performance ceiling. *(While the final notebook focuses on LightGBM for cleanliness, this step confirmed the limits of single-model tuning on this dataset.)*
+* **Model Switching Attempt:** Explored XGBoost as an alternative to push past the performance ceiling. *(While the final notebook focuses on LightGBM for cleanliness, this step confirmed the limits of single-model tuning on this dataset.)*
 
 ---
 
@@ -41,8 +41,8 @@ This project focused not only on maximizing performance but also on **mastering 
 
 This competition provided valuable insights into practical machine learning deployment and optimization.
 
-* **Limit of Tuning:** Confirmed that the $\text{0.05566}$ performance barrier could not be broken solely through parameter optimization, highlighting the necessity of data enrichment.
-* **Future Strategy:** For future projects, the primary focus will shift to **Ensembling techniques** (blending $\mathbf{LGBM}$ and $\mathbf{XGBoost}$ predictions) and **deeper Feature Engineering** (creating new interaction terms) to effectively lower the $\text{RMSE}$.
+* **Limit of Tuning:** Confirmed that the 0.05566 performance barrier could not be broken solely through parameter optimization, highlighting the necessity of data enrichment.
+* **Future Strategy:** For future projects, the primary focus will shift to **Ensembling techniques** (blending LGBM and XGBoost predictions) and **deeper Feature Engineering** (creating new interaction terms) to effectively lower the RMSE
 
 ---
 
